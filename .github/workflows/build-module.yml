@@ -71,6 +71,7 @@ jobs:
           echo "    > make target/linux/compile"
           make target/linux/compile  -i -j `nproc` V=s
 
+          echo 9469a6c8c449c47e503c05678ea1559d-r1 > ./build_dir/target-*/linux-*/linux-*/.vermagic
           VERMAGIC=`cat ./build_dir/target-*/linux-*/linux-*/.vermagic`
           VERMAGIC_EXPECTED=${{ matrix.build_env.vermagic }}
 
