@@ -47,7 +47,7 @@ jobs:
           ./scripts/feeds update && ./scripts/feeds install -a
 
           # Setup config with AWG and dependencies
-          wget https://downloads.openwrt.org/releases/${{ matrix.build_env.tag }}/targets/${{ matrix.build_env.target}}/${{ matrix.build_env.subtarget}}/config.buildinfo -O .config
+          cp config.buildinfo .config
           echo "CONFIG_PACKAGE_kmod-amneziawg=m" >> .config
           echo "CONFIG_PACKAGE_amneziawg-tools=y" >> .config
           echo "CONFIG_PACKAGE_luci-app-amneziawg=y" >> .config
