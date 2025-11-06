@@ -106,8 +106,8 @@ async function main() {
           tag: version,
           target,
           subtarget,
-          "9469a6c8c449c47e503c05678ea1559d",
-          "aarch64_cortex-a53",
+          '9469a6c8c449c47e503c05678ea1559d',
+          'aarch64_cortex-a53',
         });
       }
     }
